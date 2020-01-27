@@ -17,11 +17,11 @@ public class Factorial {
       }
       if (n == 0) // end loop when user enters 0
         break;
-      else if (n < 1 || n > 12) 
+      else if (n < 1 || n > 12)
         System.out.println("Number must be 1-12");
       else {
         result = calculate(n); // perform recursive calculation
-       // result = iterative_calculate(n); // perform iterative calculation
+        // result = iterative_calculate(n); // perform iterative calculation
         System.out.println("Factorial of " + n + " is: " + result);
       }
       reader.nextLine(); // clear extra data from bufferr
@@ -40,9 +40,9 @@ public class Factorial {
     }
   }
 
-  public static int iterative_calculate(int n){
+  public static int iterative_calculate(int n) {
     int result = 1;
-    while(n > 0){
+    while (n > 0) {
       result = n * result;
       n = n - 1;
     }
