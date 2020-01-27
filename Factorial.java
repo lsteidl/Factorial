@@ -20,7 +20,8 @@ public class Factorial {
       else if (n < 1 || n > 12) 
         System.out.println("Number must be 1-12");
       else {
-        result = calculate(n);
+        result = calculate(n); // perform recursive calculation
+       // result = iterative_calculate(n); // perform iterative calculation
         System.out.println("Factorial of " + n + " is: " + result);
       }
       reader.nextLine(); // clear extra data from bufferr
@@ -37,5 +38,14 @@ public class Factorial {
     } else { // recursive call
       return (n * calculate(n - 1));
     }
+  }
+
+  public static int iterative_calculate(int n){
+    int result = 1;
+    while(n > 0){
+      result = n * result;
+      n = n - 1;
+    }
+    return result;
   }
 }
